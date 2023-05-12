@@ -6,23 +6,33 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:05:33 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/04 17:46:13 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/05/12 19:44:00 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include<unistd.h>
 #include<string.h>
 
-/*
+
 void	*ft_memset(void *s, int c, size_t n)
 {
-	
+	unsigned char	*p;
+
+	p = s;
+	while (n > 0)
+	{
+		*p = (unsigned char)c;
+		p ++;
+		n --;
+	}
+	return (s);
 }
-*/
+
 int	main(void)
 {
-	int	i;
+	char arr[6] = "Hello";
 
-	i = 4;
+//	write(1, memset(arr, 'A', 4), 5);	
+	write(1, ft_memset(arr, 'A', 4), 5);
 	return (0);
 }
