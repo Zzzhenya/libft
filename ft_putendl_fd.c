@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
+/*
 void	ft_putendl_fd(char *s, int fd);
 
 int	main(void)
@@ -19,7 +21,7 @@ int	main(void)
 	ft_putendl_fd("Hello World!", 1);
 	return (0);
 }
-
+*/
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
@@ -30,6 +32,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write (fd, &s[i], 1);
 		i ++;
 	}
-	write (fd, "\0", 1);
 	write (fd, "\n", 1);
 }

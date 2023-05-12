@@ -13,24 +13,23 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] || s2[i]) && i < n )
+	while ((s1[i] || s2[i]) && i < n)
 	{
-
 		if (s1[i] == s2[i])
 			i ++;
 		else
-			return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
-
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 	}
 	return (0);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	printf("strncmp: %i\n",strncmp(argv[1], argv[2], atoi(argv[3])));
@@ -39,3 +38,4 @@ int	main(int argc, char **argv)
 	printf("ft_nonASCII: %i\n",ft_strncmp("\201", "", 1));
 	return (0);
 }
+*/

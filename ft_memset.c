@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+/*
 #include<unistd.h>
 #include<string.h>
-
-
+*/
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
@@ -27,7 +29,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
+/*
 int	main(void)
 {
 	char arr[6] = "Hello";
@@ -36,3 +38,4 @@ int	main(void)
 	write(1, ft_memset(arr, 'A', 4), 5);
 	return (0);
 }
+*/

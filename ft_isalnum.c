@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
 #include<unistd.h>
 #include<ctype.h>
 #include<stdio.h>
 */
-int	ft_isdigit(int c)
+int	ft_isalnum(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (8);
@@ -28,7 +29,7 @@ int	ft_isdigit(int c)
 int	main(void)
 {
 	printf ("isalnum: %d", isalnum('A'));
-	printf ("\nft_isalnum: %d \n", ft_isdigit('A'));
+	printf ("\nft_isalnum: %d \n", ft_isalnum('A'));
 	return (0);
 }
 */

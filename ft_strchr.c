@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 #include <unistd.h>
 
@@ -21,10 +22,11 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
 	write (1, strchr("HelloWor\nld!", 'd'), 5);
 	write (1, ft_strchr("HelloWor\nld!", 'd'), 5);
 	return (0);
 }
+*/

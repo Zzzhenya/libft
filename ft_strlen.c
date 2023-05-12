@@ -10,10 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+/*
 #include<unistd.h>
 #include<string.h>
 #include<stdio.h>
-
+*/
 size_t	ft_strlen(const char *s)
 {
 	size_t	len;
@@ -23,10 +26,11 @@ size_t	ft_strlen(const char *s)
 		len ++;
 	return (len);
 }
-
+/*
 int	main(void)
 {
 	printf ("strlen: %lu", strlen(""));
 	printf ("\nft_strlen: %lu \n", ft_strlen(""));
 	return (0);
 }
+*/

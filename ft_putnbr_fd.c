@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
@@ -34,7 +35,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr_fd(2147483647, 1);
@@ -45,3 +46,4 @@ int	main(void)
 	ft_putchar_fd('\n', 1);
 	return (0);
 }
+*/
