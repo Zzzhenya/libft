@@ -10,9 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+/*
 #include <string.h>
 #include <unistd.h>
-
+*/
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptr;
@@ -21,15 +24,16 @@ char	*ft_strrchr(const char *s, int c)
 	while (*s != '\0')
 	{
 		if (*s == (char)c)
-			ptr = (char	*)s;
+			ptr = (char *)s;
 		s ++;
 	}
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	write (1, strrchr("HelloWorld!", 'o'), 2);
 	write (1, ft_strrchr("HelloWorld!", 'o'), 2);
 	return (0);
 }
+*/
