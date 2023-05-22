@@ -1,8 +1,20 @@
-#include "libft.h"
-/*
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/22 13:58:56 by sde-silv          #+#    #+#             */
+/*   Updated: 2023/05/22 14:11:01 by sde-silv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include "libft.h"
+
 #include <string.h>
 #include <unistd.h>
-*/
+
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -27,12 +39,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
+
 int	main(void)
 {
 	char    *src = "Hello World!";
---	char	*dest;
---	dest = src + 1;
 	char    dest[12];
 	char    *rtn;
 	int     n;
@@ -48,4 +58,3 @@ int	main(void)
 	write (1, "\n", 1);
 	return (0);
 }
-*/

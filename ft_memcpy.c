@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/22 13:40:18 by sde-silv          #+#    #+#             */
+/*   Updated: 2023/05/22 13:41:04 by sde-silv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
 #include <string.h>
@@ -13,7 +25,7 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 	char_src = (char *)src;
 	char_dest = (char *)dest;
 	i = 0;
-	while ( i < n)
+	while (i < n)
 	{
 		char_dest[i] = char_src[i];
 		i ++;

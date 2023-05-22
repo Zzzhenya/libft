@@ -6,16 +6,13 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 18:45:49 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/10 20:34:15 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/05/22 13:58:35 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/*
 #include <string.h>
 #include <unistd.h>
-*/
+
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptr;
@@ -29,11 +26,10 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (ptr);
 }
-/*
+
 int	main(void)
 {
 	write (1, strrchr("HelloWorld!", 'o'), 2);
 	write (1, ft_strrchr("HelloWorld!", 'o'), 2);
 	return (0);
 }
-*/

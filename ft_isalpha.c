@@ -6,17 +6,17 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:38:23 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/12 12:19:51 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/05/22 13:41:49 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
 #include<unistd.h>
 #include<ctype.h>
 #include<stdio.h>
 */
+
 int	ft_isalpha(int c)
 {
 	if (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'))

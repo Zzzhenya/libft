@@ -6,16 +6,16 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:05:33 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/12 19:44:00 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/05/22 13:56:40 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
 #include<unistd.h>
 #include<string.h>
 */
+
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;

@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 18:45:49 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/16 12:35:10 by sde-silv         ###   ########.fr       */
+/*   Created: 2023/05/22 14:58:14 by sde-silv          #+#    #+#             */
+/*   Updated: 2023/05/22 19:33:07 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-#include <string.h>
-#include <unistd.h>
-*/
-char	*ft_strchr(const char *s, int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	while (*s != (char)c && *s != '\0')
-		s ++;
-	if (*s == (char)c)
-		return ((char *)s);
-	return (NULL);
+	unsigned char   *p;
+
+	p = s;
+	while (n > 0)
+	{
+		*p = (unsigned char)c;
+		p ++;
+		n --;
+	}
+	return (s);
 }
-/*
-int	main(void)
+
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	write (1, strchr("HelloWor\nld!", 'd'), 5);
-	write (1, ft_strchr("HelloWor\nld!", 'd'), 5);
-	return (0);
+	void	*ptr;
+	size_t	byte_size;
+
+	byte_size = nmemb * size;
+	ptr = malloc(byte_size);
+	if (ptr != NULL)
+		ft_memset(ptr, 0, byte_size);
+	return (ptr);
 }
-*/
