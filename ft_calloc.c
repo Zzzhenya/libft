@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
+/*
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char   *p;
@@ -25,7 +27,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
+*/
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;

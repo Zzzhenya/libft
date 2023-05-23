@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:38:23 by sde-silv          #+#    #+#             */
 /*   Updated: 2023/05/16 12:27:37 by sde-silv         ###   ########.fr       */
@@ -17,7 +17,7 @@
 #include<ctype.h>
 #include<stdio.h>
 */
-int	ft_isdigit(int c)
+int	ft_isalnum(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (8);
@@ -25,7 +25,6 @@ int	ft_isdigit(int c)
 		return (8);
 	return (0);
 }
-
 /*
 int	main(void)
 {
