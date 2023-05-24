@@ -6,7 +6,7 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 13:40:18 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/22 13:41:04 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/05/24 15:31:54 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <unistd.h>
 */
 
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*char_src;
 	char	*char_dest;
