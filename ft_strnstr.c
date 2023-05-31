@@ -1,0 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/31 13:38:24 by sde-silv          #+#    #+#             */
+/*   Updated: 2023/05/31 16:09:38 by sde-silv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+/*
+#include <unistd.h>
+*/
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (ft_strlen(little) < 1)
+		return ((char	*)big);
+	while (big[i] != '\0' && i < len)
+	{
+		if (big[i] == little[j])
+		{
+			if (j == ft_strlen(little))
+			return ((char   *)big + i - j);
+			j ++;
+		}
+		else
+			j = 0;
+		i ++;
+	}
+	return(NULL);
+}
+/*
+int main(void)
+{
+	const char *largestring = "Foo Bar Baz";
+	const char *smallstring = "az";
+	char *ptr;
+
+	write(1, ft_strnstr(largestring, smallstring, 12), 12);
+
+	return (0);
+}
+*/
