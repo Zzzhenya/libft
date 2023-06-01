@@ -30,26 +30,22 @@ int	ft_atoi(const char *str)
 	int		sign;
 
 	i = 0;
-	sign = 0;
+	sign = 1;
 	n = 0;
-	while (str[i] != '\0' && ft_isspace(str[i]) != 0)
+	while (str[i] && ft_isspace(str[i]) != 0)
 		i ++;
-	while (str[i] != '\0' && sign == 0)
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (str[i] == '+')
-			sign = 1;
-		else if (str[i] == '-')
+		if (str[i] == '-')
 			sign = -1;
 		i ++;
 	}
-	while (str[i] != '\0' && (str[i] >= '0' && str[i] <= '9'))
-	{	
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
 		n = (n * 10) + (str[i] - 48);
 		i ++;
 	}
-	if (sign == -1 || sign == 1)
-		return (sign * n);
-	return (0);
+	return (sign * n);
 }
 /*
 int	main(void)
