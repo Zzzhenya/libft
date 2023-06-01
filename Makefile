@@ -6,7 +6,7 @@
 #    By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/09 11:14:14 by sde-silv          #+#    #+#              #
-#    Updated: 2023/05/31 12:56:31 by sde-silv         ###   ########.fr        #
+#    Updated: 2023/06/01 13:39:37 by sde-silv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ SRC 	= 	ft_bzero.c \
 			ft_isascii.c \
 			ft_memset.c \
 			ft_strchr.c \
-			ft_strrchr.c 
+			ft_strrchr.c \
+			ft_strnstr.c \
+			ft_memchr.c
 
 all: $(NAME)
 
