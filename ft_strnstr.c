@@ -6,7 +6,7 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 13:38:24 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/31 16:44:09 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/01 14:02:34 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,20 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	j = 0;
 	llen = ft_strlen(little);
 	if (llen < 1)
-		return ((char	*)big);
+		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
 		if (big[i] == little[j])
 		{
 			if (j == llen - 1)
-				return ((char   *)big + i - j);
+				return ((char *)big + i - j);
 			j ++;
 		}
 		else
 			j = 0;
 		i ++;
 	}
-	return(NULL);
+	return (NULL);
 }
 /*
 int main(void)

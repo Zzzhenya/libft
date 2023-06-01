@@ -6,7 +6,7 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:52:35 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/01 13:39:15 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/01 14:03:08 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
