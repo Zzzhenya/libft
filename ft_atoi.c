@@ -23,7 +23,7 @@ static int	ft_isspace(int c)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int		i;
 	int		n;
@@ -32,17 +32,17 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	n = 0;
-	while (str[i] && ft_isspace(str[i]) != 0)
+	while (nptr[i] && ft_isspace(nptr[i]) != 0)
 		i ++;
-	if (str[i] == '-' || str[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			sign = -1;
 		i ++;
 	}
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		n = (n * 10) + (str[i] - 48);
+		n = (n * 10) + (nptr[i] - 48);
 		i ++;
 	}
 	return (sign * n);
