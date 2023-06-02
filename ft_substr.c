@@ -12,11 +12,9 @@
 
 #include <stdlib.h>
 #include "libft.h"
+/*
 #include <unistd.h>
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	initiate pointer to NULL
+initiate pointer to NULL
 	if index/start is in s
 	go to index/start
 	check the size of the substring
@@ -30,4 +28,41 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			copy until size
 			add null terminator
 	return pointer to allocated substring memory area
+*/
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*ptr;
+	size_t	i;
+	size_t	sublen;
+
+	ptr = NULL;
+	i = 0;
+	if (s[i] && start <= ft_strlen(s))
+	{
+		while (s[i] && i < start)
+			i ++;
+	}
+	sublen = ft_strlen(s + start);
+	if (sublen >= len)
+	{
+		ptr = malloc((len + 1) * sizeof(char));
+		if (ptr)
+			ft_strlcpy(ptr, (s + start), len + 1);
+	}
+	else if (sublen < len)
+	{
+		ptr = malloc((sublen + 1) * sizeof(char));
+		if (ptr)
+			ft_strlcpy(ptr, (s + start), sublen + 1);
+	}
+	return (ptr);
 }
+/*
+int	main()
+{
+	ft_putstr_fd(ft_substr("aaa", 1, 5), 1);
+	write (1, "\n", 1);
+	return (0);
+}
+*/
