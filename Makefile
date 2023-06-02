@@ -6,7 +6,7 @@
 #    By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/09 11:14:14 by sde-silv          #+#    #+#              #
-#    Updated: 2023/06/01 15:37:14 by sde-silv         ###   ########.fr        #
+#    Updated: 2023/06/02 15:32:53 by sde-silv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,12 +38,13 @@ SRC 	= 	ft_bzero.c \
 			ft_strnstr.c \
 			ft_memchr.c \
 			ft_memcmp.c \
-			ft_atoi.c
+			ft_atoi.c \
+			ft_substr.c
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Werror -Wextra $(SRC)
+	cc -c -Wall -Werror -Wextra $(SRC)
 	ar rc $(NAME) *.o
 
 clean:

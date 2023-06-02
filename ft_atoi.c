@@ -6,16 +6,16 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 16:39:50 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/01 17:44:29 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/02 13:51:09 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /* 
 #include <unistd.h>
 #include <stdlib.h>
 */
-
 static int	ft_isspace(int c)
 {
 	if (c == ' ' || (c >= '\t' && c <= '\r'))
