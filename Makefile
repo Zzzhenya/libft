@@ -39,7 +39,8 @@ SRC 	= 	ft_bzero.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_atoi.c \
-			ft_substr.c
+			ft_substr.c \
+			ft_strjoin.c
 
 all: $(NAME)
 
