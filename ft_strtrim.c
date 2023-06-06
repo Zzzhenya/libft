@@ -6,7 +6,7 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:59:37 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/06 14:52:38 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/06 14:56:27 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	char *ptr;
@@ -48,4 +48,4 @@ int	main(void)
 	free (ptr);
 	return (0);
 }
-
+*/
