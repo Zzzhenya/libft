@@ -6,7 +6,7 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 13:52:02 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/02 17:43:25 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/06 17:57:11 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		while (s[i] && i < start)
 			i ++;
 	}
-	sublen = ft_strlen(s + start);
-	if (sublen >= len)
-	{
-		ptr = malloc((len + 1) * sizeof(char));
-		if (ptr)
-			ft_strlcpy(ptr, (s + start), len + 1);
-	}
+	sublen = ft_strlen(s + start)
 	else if (sublen < len)
 	{
 		ptr = malloc((sublen + 1) * sizeof(char));
 		if (ptr)
 			ft_strlcpy(ptr, (s + start), sublen + 1);
 	}
+	if (sublen >= len)
+	{
+		ptr = malloc((len + 1) * sizeof(char));
+		if (ptr)
+			ft_strlcpy(ptr, (s + start), len + 1);
+	}
+
 	return (ptr);
 }
 /*
