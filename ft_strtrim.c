@@ -29,13 +29,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start ++;
-	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end-1]))
+	end = ft_strlen(s1) - 1;
+	while (end + 1 > start && ft_strchr(set, s1[end]))
 		end --;
-	ptr = (char *)malloc(sizeof(char) * (end - start + 1));
+	ptr = (char *)malloc(sizeof(char) * (end - start + 2));
 	if (ptr == NULL)
 		return (NULL);
-	ft_strlcpy(ptr, &s1[start], (end - start + 1));
+	ft_strlcpy(ptr, &s1[start], (end - start + 2));
 	return (ptr);
 }
 /*
