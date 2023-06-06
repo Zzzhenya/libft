@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:08:35 by sde-silv          #+#    #+#             */
 /*   Updated: 2023/06/06 19:37:33 by sde-silv         ###   ########.fr       */
@@ -38,6 +38,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		c[i] = (*f)(i, s[i]);
 		i ++;
 	}
+	c[i] = '\0';
 	return(c);
 }
 /*
