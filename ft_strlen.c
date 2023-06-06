@@ -6,7 +6,7 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:38:23 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/16 12:31:02 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/06 14:12:19 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ size_t	ft_strlen(const char *s)
 /*
 int	main(void)
 {
-	printf ("strlen: %lu", strlen(""));
-	printf ("\nft_strlen: %lu \n", ft_strlen(""));
+	printf ("strlen: %lu", strlen("A"));
+	printf ("\nft_strlen: %lu \n", ft_strlen("A"));
 	return (0);
 }
 */
