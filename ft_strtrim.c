@@ -24,19 +24,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*ptr;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = 0;
-	ptr = 0;
-	end = ft_strlen(s1) - 1;
-	if (s1 != 0 && set !=0)
-	{
-		while (s1[start] && ft_strchr(set, s1[start]))
-			start ++;
-		while (s1[end] && ft_strchr(set, s1[end]) && end > start)
-			end --;
-		ptr = malloc (sizeof(char) * (end - start + 2));
-		if (ptr)
-			ft_strlcpy(ptr, s1 + start, (end - start + 2));
-	}
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start ++;
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end-1]))
+		end --;
+	ptr = (char *)malloc(sizeof(char) * (end - start + 1));
+	if (ptr == NULL)
+		return (NULL);
+	ft_strlcpy(ptr, &s1[start], (end - start + 1));
 	return (ptr);
 }
 /*
@@ -44,7 +43,7 @@ int	main(void)
 {
 	char *ptr;
 
-	ptr = ft_strtrim("          ", " ");
+	ptr = ft_strtrim("", "");
 	write(1, ptr, ft_strlen(ptr));
 	free (ptr);
 	return (0);
