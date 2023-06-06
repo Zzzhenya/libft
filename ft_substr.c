@@ -43,14 +43,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		while (s[i] && i < start)
 			i ++;
 	}
-	sublen = ft_strlen(s + start)
-	else if (sublen < len)
+	sublen = ft_strlen(s + start);
+	if (sublen < len)
 	{
 		ptr = malloc((sublen + 1) * sizeof(char));
 		if (ptr)
 			ft_strlcpy(ptr, (s + start), sublen + 1);
 	}
-	if (sublen >= len)
+	else if (sublen >= len)
 	{
 		ptr = malloc((len + 1) * sizeof(char));
 		if (ptr)
