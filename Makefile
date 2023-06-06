@@ -40,7 +40,8 @@ SRC 	= 	ft_bzero.c \
 			ft_memcmp.c \
 			ft_atoi.c \
 			ft_substr.c \
-			ft_strjoin.c
+			ft_strjoin.c \
+			ft_strtrim.c
 
 all: $(NAME)
 
