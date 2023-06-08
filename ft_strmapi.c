@@ -6,7 +6,7 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 18:08:35 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/06 19:37:33 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/08 14:12:51 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char ft_toupper_fd(unsigned int i, char c)
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char	*c;
+	char			*c;
 
 	c = malloc(ft_strlen(s) + 1);
 	if (!c)
@@ -39,7 +39,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i ++;
 	}
 	c[i] = '\0';
-	return(c);
+	return (c);
 }
 /*
 int	main(void)
