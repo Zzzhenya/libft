@@ -6,7 +6,7 @@
 #    By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/09 11:14:14 by sde-silv          #+#    #+#              #
-#    Updated: 2023/06/02 15:32:53 by sde-silv         ###   ########.fr        #
+#    Updated: 2023/06/08 14:43:08 by sde-silv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,8 @@ SRC 	= 	ft_bzero.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_strmapi.c \
-			ft_striteri.c
+			ft_striteri.c \
+			ft_strdup.c
 
 all: $(NAME)
 
