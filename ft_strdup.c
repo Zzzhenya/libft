@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s)
 	if (!ptr)
 		return (NULL);
 	ft_strlcpy(ptr, s, ft_strlen(s) + 1);
-	return (ptr);	
+	return (ptr);
 }
 /*
 int	main(void)
