@@ -44,7 +44,8 @@ SRC 	= 	ft_bzero.c \
 			ft_strtrim.c \
 			ft_strmapi.c \
 			ft_striteri.c \
-			ft_strdup.c
+			ft_strdup.c \
+			ft_split.c
 
 all: $(NAME)
 
