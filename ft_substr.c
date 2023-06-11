@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 /*
 #include <unistd.h>
@@ -33,21 +32,21 @@ strlen(s) >= start
 Allocate mem (len + 1) of char size
 */
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char    *ptr;
+	char	*ptr;
 
-    if (!s)
-        return (0);
-    if (ft_strlen(s) < start)
-        return (ft_strdup(""));
-    if (ft_strlen(s + start) < len)
-        len = ft_strlen(s + start);
-    ptr = malloc(sizeof(char) * (len + 1));
-    if (!ptr)
-        return (0);
-    ft_strlcpy(ptr, s + start, len + 1);
-    return (ptr);
+	if (!s)
+		return (0);
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (0);
+	ft_strlcpy(ptr, s + start, len + 1);
+	return (ptr);
 }
 /*
 int    main(void)

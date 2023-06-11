@@ -22,8 +22,8 @@ Des: 	Allocates (with malloc(3)) and returns a string
 */
 static int	count_digits(int n)
 {
-	int			count;
-	long int 	nb;
+	int		count;
+	long int	nb;
 
 	count = 0;
 	nb = n;
@@ -43,7 +43,7 @@ static int	count_digits(int n)
 char	*ft_itoa(int n)
 {
 	char		*ptr;
-	int			digits;
+	int		digits;
 	long int	nbr;
 
 	digits = count_digits(n);
