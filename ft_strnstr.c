@@ -6,7 +6,7 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 13:38:24 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/12 14:25:47 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:18:41 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!little || little[0] == '\0')
+	if (little[0] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
