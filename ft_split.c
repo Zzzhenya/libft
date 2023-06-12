@@ -6,7 +6,7 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:47:28 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/12 14:42:34 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:03:37 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 	int		str;
 
 	arr = malloc(sizeof(char *) * (arr_length(s, c) + 1));
-	if (!s && !arr)
+	if (!arr)
 		return (NULL);
 	i = 0;
 	str = 0;
