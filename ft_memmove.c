@@ -22,6 +22,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	char_s = (char *)src;
 	char_d = (char *)dest;
 	while (i < n)
