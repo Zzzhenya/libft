@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:20:56 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/08 14:39:51 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:23:40 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 /*
 #include <string.h>
 #include <unistd.h>

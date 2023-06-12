@@ -6,13 +6,11 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:47:28 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/08 18:34:38 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:26:00 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
 /*
 #include <string.h>
 #include <unistd.h>
