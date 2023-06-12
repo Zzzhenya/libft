@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*char_dest;
 	size_t	i;
 
+	if (!dest && !src)
+		return (NULL);
 	char_src = (char *)src;
 	char_dest = (char *)dest;
 	i = 0;
@@ -43,7 +45,7 @@ int	main(void)
 
 	write (1,src, 12);
 	write (1, "\n", 1);
-	rtn = ft_memcpy(dest, src, n);
+	rtn = ft_memcpy(((void *)0), ((void *)0), 5);
 	write(1,rtn, n);
 	write (1, "\n", 1);	
 	return (0);
