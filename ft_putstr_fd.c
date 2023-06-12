@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:40:04 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/16 14:25:53 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:02:53 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 /*
 void	ft_putstr_fd(char *s, int fd);
@@ -21,6 +20,7 @@ int	main(void)
 	return (0);
 }
 */
+
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;

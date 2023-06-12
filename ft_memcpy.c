@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 13:40:18 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/24 15:31:54 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:01:05 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
 #include <string.h>
-#include <unistd.h>
 */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

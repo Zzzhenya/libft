@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 10:57:03 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/06 10:58:50 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:53:51 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
 #include <string.h>
-#include <unistd.h>
 */
-#include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

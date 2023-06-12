@@ -6,12 +6,11 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 12:24:28 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/12 12:28:18 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:59:48 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
 #include <unistd.h>
 	char *ft_itoa(int n);
@@ -32,6 +31,7 @@ Des: 	Allocates (with malloc(3)) and returns a string
 7. include the case for n = -2147483648LL 
 	(where n cannot be multiplied by -1)
 */
+
 static int	count_digits(int n)
 {
 	int			count;

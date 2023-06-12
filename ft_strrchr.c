@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 18:45:49 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/22 13:58:35 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:06:59 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
 #include <string.h>
-#include <unistd.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -26,6 +24,7 @@ size_t	ft_strlen(const char *s)
 	return (len);
 }
 */
+
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	len;

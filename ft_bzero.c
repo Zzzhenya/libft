@@ -6,16 +6,15 @@
 /*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:29:24 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/22 13:39:40 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:47:28 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
 #include <string.h>
-#include <unistd.h>
 */
+
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*p;

@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <sde-silv@student@42berlin.de>    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 13:58:56 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/24 15:07:29 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:39:51 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
 #include <string.h>
-#include <unistd.h>
 */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

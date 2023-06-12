@@ -6,14 +6,13 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:20:56 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/12 12:23:40 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:03:20 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
 #include <string.h>
-#include <unistd.h>
 */
 
 char	*ft_strdup(const char *s)

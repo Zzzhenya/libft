@@ -6,17 +6,18 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:38:23 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/16 12:27:37 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:36:45 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
-#include<unistd.h>
+	include ft_isdigit when testing
+
 #include<ctype.h>
 #include<stdio.h>
 */
+
 int	ft_isalnum(int c)
 {
 	if ('0' <= c && c <= '9')

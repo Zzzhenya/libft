@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:38:23 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/06 14:12:19 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:54:36 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
-#include<unistd.h>
 #include<string.h>
 #include<stdio.h>
 */
+
 size_t	ft_strlen(const char *s)
 {
 	size_t	len;

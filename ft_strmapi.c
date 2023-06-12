@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <sde-silv@student.42berlin.de     +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/06 18:08:35 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/08 14:12:51 by sde-silv         ###   ########.fr       */
+/*   Created: 2023/06/12 15:05:20 by sde-silv          #+#    #+#             */
+/*   Updated: 2023/06/12 15:05:57 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 /*
-#include <unistd.h>
+	include ft_strlen when testing 
 
-char ft_toupper_fd(unsigned int i, char c)
+static char ft_toupper_fd(unsigned int i, char c)
 {
     if ('a' <= (int)c && (int)c <= 'z')
         return ((char)((int)c - 32));

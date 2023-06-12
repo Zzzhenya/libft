@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:42:26 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/05/31 10:42:38 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:04:24 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 /*
 #include <string.h>
 #include <stdio.h>
-#include <unistd.h>
 */
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;

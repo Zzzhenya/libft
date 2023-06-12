@@ -6,16 +6,14 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:52:35 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/01 15:05:23 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:50:00 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
 #include <string.h>
-#include <stdlib.h>
-#include <unistd.h>
 */
-#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

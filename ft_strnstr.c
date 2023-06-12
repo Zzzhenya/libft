@@ -3,39 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sde-silv <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 13:38:24 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/01 14:02:34 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:25:47 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 /*
-#include <unistd.h>
+	include ft_putendl_fd.c when testing main
 */
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	llen;
 
 	i = 0;
-	j = 0;
-	llen = ft_strlen(little);
-	if (llen < 1)
+	if (!little || little[0] == '\0')
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
-		if (big[i] == little[j])
+		j = 0;
+		while (big[i + j] == little[j] && i + j < len)
 		{
-			if (j == llen - 1)
-				return ((char *)big + i - j);
+			if (little[j + 1] == '\0')
+				return ((char *)big + i);
 			j ++;
 		}
-		else
-			j = 0;
 		i ++;
 	}
 	return (NULL);
@@ -43,12 +39,40 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main(void)
 {
-	const char *largestring = "Foo Bar Baz";
-	const char *smallstring = "Foo";
-	char *ptr;
+	char	*ptr;
 
-	write(1, ft_strnstr(largestring, smallstring, 12), 12);
-
+	ptr = ft_strnstr("Hello World!", "l", 0);
+	if (ptr)
+		ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "l", 1);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "l", 2);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "l", 11);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "l", 12);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "l", 15);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("", "l", 3);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "", 15);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "l", -1);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	ptr = ft_strnstr("Hello World!", "l", -200);
+	if (ptr)
+        ft_putendl_fd(ptr, 1);
+	else
+		ft_putendl_fd("Function returned NULL", 1);
 	return (0);
 }
 */
