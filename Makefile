@@ -46,7 +46,16 @@ SRCS 	= 	ft_bzero.c \
 			ft_striteri.c \
 			ft_strdup.c \
 			ft_split.c \
-			ft_itoa.c
+			ft_itoa.c \
+			print_chr.c \
+			print_str.c \
+			print_int.c \
+			print_ptr.c \
+			print_hex.c \
+			print_uint.c \
+			ft_printf.c \
+			get_next_line.c \
+			get_next_line_utils.c
 
 OBJS	= $(SRCS:.c=.o)
 
