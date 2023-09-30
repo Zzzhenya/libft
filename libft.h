@@ -25,6 +25,12 @@
 #  define FD_MAX 1024
 # endif
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -78,5 +84,10 @@ char	*gnl_ft_strchr(const char *s, int c);
 char	*gnl_ft_strjoin(char *s1, char const *s2);
 size_t	gnl_ft_strlcpy(char *dest, char const *src, size_t size);
 size_t	gnl_ft_strlen(const char *s);
+
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstnew(void *content);
+int 	ft_lstsize(t_list *lst);
+void 	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
