@@ -55,22 +55,34 @@ SRCS 	= 	ft_bzero.c \
 			print_uint.c \
 			ft_printf.c \
 			get_next_line.c \
-			get_next_line_utils.c
+			get_next_line_utils.c \
+
+SRCSB 	= 	ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c
 
 OBJS	= $(SRCS:.c=.o)
 
+OBJSB	= $(SRCSB:.c=.o)
+
+CFLAGS  = -Wall -Werror -Wextra 
+
 all: $(NAME)
 
-$(NAME):
-	cc -c -Wall -Werror -Wextra $(SRCS)
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
+	rm -f $(OBJSB)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all fclean re clean
+bonus:$(OBJSB)
+	ar rcs $(NAME) $(OBJSB)
+
+.PHONY: all fclean re clean bonus 
