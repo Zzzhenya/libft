@@ -15,7 +15,6 @@ void    ft_lstclear(t_list **lst, void (*del)(void*))
 
     while (*lst)
     {
-        printf("del: %zu\n", (size_t)(*lst)->content);
         (del)((*lst)->content);
         temp = *lst;
         *lst = temp->next;
