@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 13:49:29 by sde-silv          #+#    #+#             */
+/*   Updated: 2023/10/04 13:57:04 by sde-silv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
 void    ft_multiplier(void  *content)
@@ -6,13 +18,13 @@ void    ft_multiplier(void  *content)
 }
 */
 
-void    ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    while (lst)
-    {
-        (f)(lst->content);
-        lst = lst->next;
-    }
+	while (lst)
+	{
+		(f)(lst->content);
+		lst = lst->next;
+	}
 }
 /*
 int main(void)

@@ -6,7 +6,7 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 13:56:16 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/12 14:44:15 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/10/04 14:01:45 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 */
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
-{	
+{
 	size_t	i;
 
 	i = 0;

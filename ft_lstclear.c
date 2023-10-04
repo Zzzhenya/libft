@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/04 13:53:52 by sde-silv          #+#    #+#             */
+/*   Updated: 2023/10/04 13:57:25 by sde-silv         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
 void	del(void *ptr)
@@ -9,18 +21,18 @@ void	del(void *ptr)
 }
 */
 
-void    ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    t_list  *temp;
+	t_list	*temp;
 
-    while (*lst)
-    {
-        (del)((*lst)->content);
-        temp = *lst;
-        *lst = temp->next;
-        free (temp);
-    }
-    *lst = 0;
+	while (*lst)
+	{
+		(del)((*lst)->content);
+		temp = *lst;
+		*lst = temp->next;
+		free (temp);
+	}
+	*lst = 0;
 }
 /*
 int main(void)
