@@ -6,7 +6,7 @@
 /*   By: sde-silv <sde-silv@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 14:47:28 by sde-silv          #+#    #+#             */
-/*   Updated: 2023/06/12 16:03:37 by sde-silv         ###   ########.fr       */
+/*   Updated: 2023/10/23 13:52:34 by sde-silv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,21 @@ static char	*ft_copy_str(const char *s, int start, int len)
 	return (str);
 }
 
+static void	ft_free(char **arr, int loc)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i] && i <= loc)
+	{
+		free(arr[i]);
+		arr[i] = NULL;
+		i ++;
+	}
+	free(arr);
+	arr = NULL;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
@@ -85,6 +100,11 @@ char	**ft_split(char const *s, char c)
 		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
 		{
 			arr[str] = ft_copy_str(s, start, i);
+			if (!arr[str])
+			{
+				ft_free(arr, str);
+				return (0);
+			}
 			str ++;
 			start = -1;
 		}
@@ -94,23 +114,23 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 /*
-int main(void) {
+int main(void) 
+{
 	int			i ;
     char const *s;
     char	**arr;
 
 
-	s = " Hello World ! ";
+	s = " 1 2 3 4";
 	arr = ft_split(s, ' ');
     
+    printf("arr%p\n", arr);
     i = 0;
     while (arr[i] != NULL) 
     {
-        printf("%s\n", result[i]);
+        printf("%s\n", arr[i]);
         i ++;
     }
-    printf("%s\n", *arr);
-
     i = 0;
     while (arr[i] != NULL) 
     {
@@ -118,7 +138,8 @@ int main(void) {
         i++;
     }
     free(arr);
-
+    arr = NULL;
+    printf("arr%p\n", arr);
     return (0);
 }
 */
