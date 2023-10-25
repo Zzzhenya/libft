@@ -56,6 +56,7 @@ SRCS 	= 	ft_bzero.c \
 			ft_printf.c \
 			get_next_line.c \
 			get_next_line_utils.c \
+			ft_isspace.c
 
 SRCSB 	= 	ft_lstnew.c \
 			ft_lstadd_front.c \
