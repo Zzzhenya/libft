@@ -65,7 +65,7 @@ static char	*ft_copy_str(const char *s, int start, int len)
 	return (str);
 }
 
-static void	ft_free(char **arr, int loc)
+static void	*ft_free(char **arr, int loc)
 {
 	int	i;
 
@@ -78,18 +78,15 @@ static void	ft_free(char **arr, int loc)
 	}
 	free(arr);
 	arr = NULL;
+	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**ft_whatever(char const *s, char c, char **arr)
 {
-	char	**arr;
 	int		start;
 	size_t	i;
 	int		str;
 
-	arr = malloc(sizeof(char *) * (arr_length(s, c) + 1));
-	if (!arr)
-		return (NULL);
 	i = 0;
 	str = 0;
 	start = -1;
@@ -101,16 +98,24 @@ char	**ft_split(char const *s, char c)
 		{
 			arr[str] = ft_copy_str(s, start, i);
 			if (!arr[str])
-			{
-				ft_free(arr, str);
-				return (0);
-			}
+				return (ft_free(arr, str));
 			str ++;
 			start = -1;
 		}
 		i++;
 	}
 	arr[str] = NULL;
+	return (arr);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+
+	arr = malloc(sizeof(char *) * (arr_length(s, c) + 1));
+	if (!arr)
+		return (NULL);
+	arr = ft_whatever(s, c, arr);
 	return (arr);
 }
 /*
