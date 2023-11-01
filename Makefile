@@ -56,9 +56,9 @@ SRCS 	= 	ft_bzero.c \
 			ft_printf.c \
 			get_next_line.c \
 			get_next_line_utils.c \
-			ft_isspace.c
-
-SRCSB 	= 	ft_lstnew.c \
+			ft_isspace.c \
+			ft_atoll.c \
+			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -69,25 +69,22 @@ SRCSB 	= 	ft_lstnew.c \
 
 OBJS	= $(SRCS:.c=.o)
 
-OBJSB	= $(SRCSB:.c=.o)
-
 CFLAGS  = -Wall -Werror -Wextra 
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@echo "...libft compiled."
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(OBJSB)
+	@rm -f $(OBJS)
+	@echo "...libft OBJs cleaned."
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "...libft.a removed."
 
 re: fclean all
 
-bonus:$(OBJSB)
-	ar rcs $(NAME) $(OBJSB)
-
-.PHONY: all fclean re clean bonus 
+.PHONY: all fclean re clean
