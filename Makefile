@@ -83,7 +83,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "...libft.a removed."
+	@echo "...libft.a cleaned."
 
 re: fclean all
 
