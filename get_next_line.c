@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*read_from_file(int fd, char *carry)
+static char	*read_from_file(int fd, char *carry)
 {
 	char	*ptr;
 	int		bytes;
@@ -37,7 +37,7 @@ char	*read_from_file(int fd, char *carry)
 	return (carry);
 }
 
-char	*gnl_get_line(char	*carry)
+static char	*gnl_get_line(char	*carry)
 {
 	int		i;
 	char	*line;
@@ -60,7 +60,7 @@ char	*gnl_get_line(char	*carry)
 	return (line);
 }
 
-char	*gnl_get_carry(char	*carry)
+static char	*gnl_get_carry(char	*carry)
 {
 	int		i;
 	char	*temp;
