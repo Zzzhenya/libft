@@ -39,7 +39,6 @@ SRCS 	= 	ft_bzero.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_atoi.c \
-			ft_substr.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_strmapi.c \
@@ -75,7 +74,10 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
-	@echo "...libft compiled."
+	@echo "...libft.a archived."
+
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $< 
 
 clean:
 	@rm -f $(OBJS)
