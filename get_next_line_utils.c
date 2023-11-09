@@ -47,7 +47,7 @@ char	*gnl_ft_strjoin(char *s1, char const *s2)
 			return (NULL);
 		s1[0] = '\0';
 	}
-	len = ft_strlen(s1) + ft_strlen(s2);
+	len = gnl_ft_strlen(s1) + gnl_ft_strlen(s2);
 	ptr = malloc((len + 1) * sizeof(char));
 	if (!ptr)
 	{
@@ -56,8 +56,8 @@ char	*gnl_ft_strjoin(char *s1, char const *s2)
 	}
 	else
 	{
-		ft_strlcpy(ptr, s1, ft_strlen(s1) + 1);
-		ft_strlcpy(ptr + ft_strlen(s1), s2, ft_strlen(s2) + 1);
+		gnl_ft_strlcpy(ptr, s1, gnl_ft_strlen(s1) + 1);
+		gnl_ft_strlcpy(ptr + gnl_ft_strlen(s1), s2, gnl_ft_strlen(s2) + 1);
 		free(s1);
 		return (ptr);
 	}

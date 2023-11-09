@@ -21,7 +21,7 @@ static char	*read_from_file(int fd, char *carry)
 	ptr = malloc (sizeof(char) * (BUFFER_SIZE + 1));
 	if (!ptr)
 		return (NULL);
-	while (bytes != 0 && !ft_strchr(carry, '\n'))
+	while (bytes != 0 && !gnl_ft_strchr(carry, '\n'))
 	{
 		bytes = read(fd, ptr, BUFFER_SIZE);
 		if (bytes == -1)
@@ -31,7 +31,7 @@ static char	*read_from_file(int fd, char *carry)
 			return (NULL);
 		}
 		ptr[bytes] = '\0';
-		carry = ft_strjoin(carry, ptr);
+		carry = gnl_ft_strjoin(carry, ptr);
 	}
 	free (ptr);
 	return (carry);
@@ -46,17 +46,17 @@ static char	*gnl_get_line(char	*carry)
 	i = 0;
 	if (carry[0] == '\0')
 		return (NULL);
-	lb = ft_strchr(carry, '\n');
+	lb = gnl_ft_strchr(carry, '\n');
 	if (lb)
 		i = ((lb - carry) / sizeof(char)) + 1;
 	else
-		i = ft_strlen(carry);
+		i = gnl_ft_strlen(carry);
 	line = malloc(sizeof(char) * (i + 1));
 	if (!line)
 	{
 		return (NULL);
 	}
-	ft_strlcpy(line, carry, i + 1);
+	gnl_ft_strlcpy(line, carry, i + 1);
 	return (line);
 }
 
@@ -67,17 +67,17 @@ static char	*gnl_get_carry(char	*carry)
 	char	*lb;
 
 	i = 0;
-	if (!ft_strchr(carry, '\n'))
+	if (!gnl_ft_strchr(carry, '\n'))
 	{
 		free (carry);
 		return (NULL);
 	}
-	lb = ft_strchr(carry, '\n');
-	i = ft_strlen(lb + 1) + 1;
+	lb = gnl_ft_strchr(carry, '\n');
+	i = gnl_ft_strlen(lb + 1) + 1;
 	temp = malloc(sizeof(char) * i);
 	if (!temp)
 		return (NULL);
-	ft_strlcpy(temp, lb + 1, i);
+	gnl_ft_strlcpy(temp, lb + 1, i);
 	free(carry);
 	return (temp);
 }
