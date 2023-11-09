@@ -100,4 +100,6 @@ int			ft_isspace(int c);
 
 long long	ft_atoll(const char *nptr);
 
+void		ft_errexit(char *msg);
+
 #endif

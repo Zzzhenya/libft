@@ -64,7 +64,8 @@ SRCS 	= 	ft_bzero.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
-			ft_lstiter.c
+			ft_lstiter.c \
+			ft_errexit.c
 
 OBJS	= $(SRCS:.c=.o)
 
