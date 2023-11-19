@@ -16,6 +16,6 @@ and exit with code EXIT_FAILURE */
 
 void	ft_errexit(char *msg)
 {
-	ft_printf("%s\n", msg);
+	ft_putendl_fd(msg, 2);
 	exit (EXIT_FAILURE);
 }
