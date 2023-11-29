@@ -35,7 +35,7 @@ char	*gnl_ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*gnl_ft_strjoin(char *s1, char const *s2)
+char	*gnl_ft_strjoin(char *s1, char *s2)
 {
 	size_t	len;
 	char	*ptr;

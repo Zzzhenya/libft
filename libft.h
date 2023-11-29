@@ -81,7 +81,7 @@ int			print_hex(unsigned long int next, int format);
 
 char		*get_next_line(int fd);
 char		*gnl_ft_strchr(const char *s, int c);
-char		*gnl_ft_strjoin(char *s1, char const *s2);
+char		*gnl_ft_strjoin(char *s1, char *s2);
 size_t		gnl_ft_strlcpy(char *dest, char const *src, size_t size);
 size_t		gnl_ft_strlen(const char *s);
 
