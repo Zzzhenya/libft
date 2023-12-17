@@ -69,7 +69,9 @@ SRCS 	= 	ft_bzero.c \
 
 OBJS	= $(SRCS:.c=.o)
 
-CFLAGS  = -Wall -Werror -Wextra 
+CFLAGS  = -Wall -Werror -Wextra
+
+CC = cc
 
 all: $(NAME)
 
@@ -78,14 +80,14 @@ $(NAME): $(OBJS)
 	@echo "...libft.a archived."
 
 %.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $< 
+	@$(CC) $(CFLAGS) -o $@ -c $< 
 
 clean:
-	@rm -f $(OBJS)
+	@rm -rf $(OBJS)
 	@echo "...libft OBJs cleaned."
 
 fclean: clean
-	@rm -f $(NAME)
+	@rm -rf $(NAME)
 	@echo "...libft.a cleaned."
 
 re: fclean all
