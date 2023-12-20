@@ -70,7 +70,7 @@ SRCS 	= 	ft_bzero.c \
 
 OBJS	= $(SRCS:.c=.o)
 
-CFLAGS  = -Wall -Werror -Wextra
+CFLAGS  = -Wall -Werror -Wextra -g
 
 CC = cc
 
