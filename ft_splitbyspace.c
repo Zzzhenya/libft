@@ -67,7 +67,7 @@ char	**ft_splitbyspace(char *str)
 	start = 0;
 	arr = malloc(sizeof(char *) * word_count(str) + 1);
 	if (!arr)
-		return (NULL)
+		return (NULL);
 	while (str[i])
 	{
 		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
