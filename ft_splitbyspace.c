@@ -4,24 +4,17 @@ static int  word_count (char *str)
 {
 	int i;
 	int count;
-	int check;
 
 	i = 0;
 	count = 0;
-	check = 1;
 	while (str[i])
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-			check = 1;
-		else
-		{
-			if (check == 1)
-			{
-				count ++;
-				check = 0;
-			}
-		}
-		i++;
+		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
+			i ++;
+		if (str[i])
+			count ++;
+		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
+			i++;
 	}
 	return (count);
 }
@@ -66,7 +59,7 @@ char	**ft_splitbyspace(char *str)
 	k = 0;
 	start = 0;
 	arr = NULL;
-	arr = malloc(sizeof(char *) * word_count(str) + 1);
+	arr = malloc(sizeof(char *) * (word_count(str) + 1));
 	if (!arr)
 		return (NULL);
 	while (str[i])
