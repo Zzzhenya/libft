@@ -102,4 +102,6 @@ long long	ft_atoll(const char *nptr);
 
 void		ft_errexit(char *msg);
 
+char		**ft_splitbyspace(char *str);
+
 #endif
