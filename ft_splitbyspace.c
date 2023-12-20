@@ -65,6 +65,7 @@ char	**ft_splitbyspace(char *str)
 	i = 0;
 	k = 0;
 	start = 0;
+	arr = NULL;
 	arr = malloc(sizeof(char *) * word_count(str) + 1);
 	if (!arr)
 		return (NULL);
@@ -77,6 +78,7 @@ char	**ft_splitbyspace(char *str)
 			i++;
 		if (i > start)
 		{
+			arr[k] = NULL;
 			arr[k] = (char *)malloc(sizeof(char) * ((i - start) + 1));
 			if (!arr[k])
 				return(ft_free_arr(arr));
