@@ -1,9 +1,9 @@
 #include "libft.h"
 
-static int  word_count (char *str)
+static int	word_count(char *str)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -21,15 +21,16 @@ static int  word_count (char *str)
 
 static char	*ft_copy_string(char *dest, char *src, int len)
 {
- 	int i = 0;
+	int	i;
 
- 	while (i < len)
- 	{
- 		dest[i] = src[i];
- 		i ++;
- 	}
- 	dest[i] = '\0';
- 	return(dest);
+	i = 0;
+	while (i < len)
+	{
+		dest[i] = src[i];
+		i ++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 static void	*ft_free_arr(char **arr)
@@ -48,20 +49,11 @@ static void	*ft_free_arr(char **arr)
 	return (NULL);
 }
 
-char	**ft_splitbyspace(char *str)
+static char	**intermediate(char *str, char **arr, int start, int k)
 {
-	char **arr;
-	int i;
-	int k;
-	int start;
+	int	i;
 
 	i = 0;
-	k = 0;
-	start = 0;
-	arr = NULL;
-	arr = malloc(sizeof(char *) * (word_count(str) + 1));
-	if (!arr)
-		return (NULL);
 	while (str[i])
 	{
 		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
@@ -71,14 +63,26 @@ char	**ft_splitbyspace(char *str)
 			i++;
 		if (i > start)
 		{
-			arr[k] = NULL;
 			arr[k] = (char *)malloc(sizeof(char) * ((i - start) + 1));
 			if (!arr[k])
-				return(ft_free_arr(arr));
+				return (ft_free_arr(arr));
 			ft_copy_string(arr[k], &str[start], i - start);
 			k ++;
 		}
 	}
 	arr[k] = NULL;
+	return (arr);
+}
+
+char	**ft_splitbyspace(char *str)
+{
+	char	**arr;
+
+	arr = malloc(sizeof(char *) * (word_count(str) + 1));
+	if (!arr)
+		return (NULL);
+	arr = intermediate(str, arr, 0, 0);
+	if (!arr)
+		return (NULL);
 	return (arr);
 }
