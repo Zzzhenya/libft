@@ -74,6 +74,11 @@ static char	*gnl_get_carry(char	*carry)
 	}
 	lb = gnl_ft_strchr(carry, '\n');
 	i = gnl_ft_strlen(lb + 1) + 1;
+	if (i == 1)
+	{
+		free(carry);
+		return (NULL);
+	}
 	temp = malloc(sizeof(char) * i);
 	if (!temp)
 		return (NULL);
