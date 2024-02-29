@@ -23,12 +23,12 @@ int	main(void)
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	while (s[i] != '\0')
+	len = 0;
+	if (s)
 	{
-		write (fd, &s[i], 1);
-		i ++;
+		len = gnl_ft_strlen(s);
+		write (fd, s, len);
 	}
 }
